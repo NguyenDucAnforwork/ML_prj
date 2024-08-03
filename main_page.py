@@ -186,7 +186,7 @@ def process_data(file):
 
             # Display prediction_df in the first tab
             with tabs[0]:
-                st.write(f"Customers predicted to be close to churning by {st.session_state.get("model_name")}:")
+                st.write(f"Customers predicted to be close to churning by {st.session_state.get('model_name')}:")
                 churned_df = prediction_df[prediction_df['Prediction'] == 1]
                 st.write(churned_df)
                 st.download_button(label="Save CSV", data=churned_df.to_csv().encode("utf-8"),
